@@ -2,6 +2,7 @@
   <div>启动测试--{{ num }}</div>
   <!-- <Button></Button> -->
   <qf-button type="primary"></qf-button>
+
 </template>
 
 <script lang="ts" setup>

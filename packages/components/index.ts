@@ -1,12 +1,11 @@
 import { App } from "vue";
-import Button from "./button";
-
-export * from "./button";
-
-const components = [Button];
+import * as components from "./src";
+export * from "./src";
 
 export default {
   install: (app: App) => {
-    components.forEach((c) => app.use(c));
+    for (const c in components) {
+      app.use((components as any)[c]);
+    }
   },
 };
