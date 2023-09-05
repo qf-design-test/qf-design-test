@@ -3,7 +3,7 @@ import { pkgPath } from "../utils/paths";
 import { series } from "gulp";
 
 export const publishComponents = async () => {
-  run("release-it", `${pkgPath}/qf-design/`);
+  run("npm run test", `${pkgPath}/qf-design/`);
 };
 
 export default series(publishComponents);

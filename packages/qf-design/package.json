@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "type": "module",
+  "scripts": {
+    "test": "echo \"哈哈哈是啥呢\""
+  },
   "keywords": [
     "qf-design-test"
   ],
