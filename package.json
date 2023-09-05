@@ -27,8 +27,5 @@
     "vite": "^4.4.9",
     "vite-plugin-dts": "1.4.1",
     "vue": "^3.2.36"
-  },
-  "keywords": [
-    "qf-design-test"
-  ]
+  }
 }
