@@ -5,3 +5,6 @@ export const componentPath = resolve(__dirname, "../../packages/components/");
 
 //pkg根目录
 export const pkgPath = resolve(__dirname, "../../packages/");
+
+export const basePath = resolve(__dirname, "../../");
+

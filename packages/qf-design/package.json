@@ -1,0 +1,24 @@
+{
+  "name": "qf-design-test",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "keywords": [
+    "qf-design-test"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "files": [
+    "es",
+    "lib"
+  ],
+  "typings": "lib/index.d.ts",
+  "author": "王凯",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qf-design-test/qf-design-test.git"
+  }
+}
