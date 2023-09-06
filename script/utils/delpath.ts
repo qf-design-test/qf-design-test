@@ -6,13 +6,11 @@ const stayFile = ["package.json", "README.md"];
 
 const delPath = async (path: string) => {
   let files: string[] = [];
-
   if (fs.existsSync(path)) {
     files = fs.readdirSync(path);
 
     files.forEach(async (file) => {
       const curPath = resolve(path, file);
-
       if (fs.statSync(curPath).isDirectory()) {
         // recurse
         if (file != "node_modules") await delPath(curPath);
@@ -24,7 +22,11 @@ const delPath = async (path: string) => {
       }
     });
 
-    if (path != `${pkgPath}/easyest`) fs.rmdirSync(path);
+    console.log(path, '啊啊啊啊');
+
+    if (path !== `${pkgPath}/qf-design`) {
+      fs.rmdirSync(path);
+    }
   }
 };
 export default delPath;

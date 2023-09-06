@@ -3,7 +3,7 @@
     class="qf-button"
     :class="{ 'qf-button--primary': type === 'primary' }"
   >
-    按钮组件
+    <slot></slot>
   </button>
 </template>
 <script lang="ts" setup>

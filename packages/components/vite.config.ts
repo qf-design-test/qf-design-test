@@ -1,27 +1,17 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-
-// 打包声明文件
 import dts from "vite-plugin-dts";
+// @ts-ignore
 import DefineOptions from "unplugin-vue-define-options/vite";
-
 export default defineConfig({
   build: {
-    //打包文件目录
-    outDir: "es",
     //压缩
     //minify: false,
     rollupOptions: {
-      //忽略打包vue文件 第一次写不写忽略less
+      //忽略不需要打包的文件
       external: ["vue", /\.less/],
       input: ["index.ts"],
       output: [
-        /**
-         * 打包文件的格式有 amd, cjs, es\esm, 等等
-         * 其中，amd 为 AMD 标准，
-         * cjs 为 CommonJS 标准，
-         * esm\es 为 ES 模块标准
-         */
         {
           //打包格式
           format: "es",
@@ -46,16 +36,15 @@ export default defineConfig({
         },
       ],
     },
-    // 构建为库
     lib: {
-      // 这个库的入口文件
       entry: "./index.ts",
+      name: "qf-design",
     },
   },
   plugins: [
     vue(),
     dts({
-      entryRoot: "./src",
+      entryRoot: "src",
       outputDir: ["../qf-design/es/src", "../qf-design/lib/src"],
       //指定使用的tsconfig.json为我们整个项目根目录下,如果不配置,你也可以在components下新建tsconfig.json
       tsConfigFilePath: "../../tsconfig.json",
