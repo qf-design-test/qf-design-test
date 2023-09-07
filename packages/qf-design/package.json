@@ -2,9 +2,9 @@
   "name": "qf-design-test",
   "version": "0.0.5",
   "description": "",
-  "main": "lib/components/index.js",
+  "main": "lib/index.js",
   "type": "module",
-  "module": "es/components/index.mjs",
+  "module": "es/index.mjs",
   "keywords": [
     "qf-design-test"
   ],

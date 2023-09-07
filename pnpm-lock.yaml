@@ -62,6 +62,9 @@ importers:
 
   docs:
     dependencies:
+      '@qf/components':
+        specifier: workspace:^
+        version: link:../packages/components
       qf-design-test:
         specifier: workspace:^
         version: link:../packages/qf-design

@@ -1,10 +1,10 @@
 import { nav } from "./nav";
-import { sidebar } from './sidebar'
+import { sidebar } from "./sidebar";
 export default {
   title: "Qf Design 官方文档",
   themeConfig: {
-    logo: '/logo2.png',
-    logoSmall: 'logo2.png',
+    logo: "/logo2.png",
+    logoSmall: "logo2.png",
     title: "qf design test",
     nav,
     sidebar,
@@ -22,5 +22,11 @@ export default {
     es: { label: "Español" },
     pt: { label: "Português" },
     ko: { label: "한국어" },
+  },
+  markdown: {
+    theme: {
+      light: "vitesse-light",
+      dark: "vitesse-dark",
+    },
   },
 };
