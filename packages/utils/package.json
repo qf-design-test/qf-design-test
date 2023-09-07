@@ -10,8 +10,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@qf/utils": "workspace:^"
-  }
+  "license": "ISC"
 }
