@@ -1,0 +1,26 @@
+# 显示得workflow名称
+name: Publish Docs Deploy
+on:
+  # 推送到master分支开始打包
+  push:
+    branches:
+      - main
+
+jobs:
+  # 开始打包
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        # 迁出触发的流程的版本 能让下面的工作流程访问
+        uses: actions/checkout@v2
+        # setup-node 可以提供node环境，指定node版本以及 npm /yarn缓存
+      - name: actions/setup-node@v2
+        uses: actions/setup-node@v2
+        with:
+          node: 16.14
+      # 初始用的npm 打包时间太长了，就想着用yarn 结果没仔细看文档，yarn 不用安装 ubuntu 上面有的
+      - name: install pnpm
+        uses: npm install pnpm
+      - run: pnpm install
+      - run: pnpm run build:docs

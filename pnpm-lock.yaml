@@ -102,9 +102,6 @@ importers:
 
   docs:
     dependencies:
-      '@qf/components':
-        specifier: workspace:^
-        version: link:../packages/components
       qf-design-test:
         specifier: workspace:^
         version: link:../packages/qf-design
@@ -116,19 +113,7 @@ importers:
         specifier: 1.0.0-rc.10
         version: 1.0.0-rc.10(@algolia/client-search@4.19.1)(@types/node@20.5.9)(less@4.2.0)(search-insights@2.8.2)
 
-  packages/a: {}
-
-  packages/b:
-    dependencies:
-      '@qf/a':
-        specifier: workspace:^1.0.0
-        version: link:../a
-
-  packages/components:
-    dependencies:
-      qf-utils-test:
-        specifier: workspace:^
-        version: link:../utils
+  packages/components: {}
 
   packages/qf-design: {}
 

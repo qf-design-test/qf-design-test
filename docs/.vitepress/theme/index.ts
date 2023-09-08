@@ -1,6 +1,6 @@
 import DefaultTheme from "vitepress/theme";
-// import qfDesignTest from "qf-design-test";
-import qfDesignTest from "@qf/components";
+import qfDesignTest from "qf-design-test";
+
 export default {
   ...DefaultTheme,
   enhanceApp: async ({ app }: any) => {

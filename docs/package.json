@@ -14,7 +14,6 @@
     "vitepress": "1.0.0-rc.10"
   },
   "dependencies": {
-    "@qf/components": "workspace:^",
     "qf-design-test": "workspace:^",
     "vue": "^3.3.4"
   }

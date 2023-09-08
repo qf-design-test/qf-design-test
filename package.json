@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build:components": "gulp -f script/build/index.ts",
+    "build:docs": "pnpm run --filter docs build",
     "publish:components": "gulp -f script/publish/index.ts",
     "lint": "eslint --ext .vue,.ts --fix --quiet ./",
     "prepare": "husky install",
