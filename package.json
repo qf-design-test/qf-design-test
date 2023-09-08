@@ -7,19 +7,22 @@
     "build:components": "gulp -f script/build/index.ts",
     "publish:components": "gulp -f script/publish/index.ts",
     "lint": "eslint --ext .vue,.ts --fix --quiet ./",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "commit": "cz"
   },
   "author": "wangkai",
   "license": "ISC",
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
+    "@release-it/conventional-changelog": "^7.0.1",
     "@types/gulp": "^4.0.13",
     "@types/gulp-autoprefixer": "^0.0.34",
     "@types/gulp-less": "^0.0.33",
     "@types/node": "^20.5.9",
     "@vitejs/plugin-vue": "^4.3.4",
     "@vue/runtime-core": "^3.3.4",
+    "commitizen": "^4.3.0",
     "eslint": "^8.48.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
@@ -40,6 +43,12 @@
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^6.6.0",
     "@typescript-eslint/parser": "^6.6.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint-plugin-vue": "^9.17.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
