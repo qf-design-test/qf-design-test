@@ -1,4 +1,4 @@
-import { withInstall } from 'qf-utils-test';
+import { withInstall } from './../../utils';
 import _Button from './button.vue';
 
 export const Button = withInstall(_Button);

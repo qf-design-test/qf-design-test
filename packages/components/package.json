@@ -9,8 +9,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "qf-utils-test": "workspace:^"
-  }
+  "license": "ISC"
 }
