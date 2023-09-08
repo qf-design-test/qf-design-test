@@ -21,8 +21,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/qf-design-test/qf-design-test.git"
-  },
-  "git": {
-    "requireCleanWorkingDir": false
   }
 }

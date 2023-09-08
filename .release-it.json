@@ -1,12 +1,33 @@
 {
   "plugins": {
     "@release-it/conventional-changelog": {
-      "preset": "angular",
+      "preset": {
+        "name": "conventionalcommits",
+        "types": [
+          {
+            "type": "feat",
+            "section": "✨新功能"
+          },
+          {
+            "type": "fix",
+            "section": "🐞问题修复"
+          },
+          {
+            "type": "style",
+            "section": "🌈样式"
+          },
+          {
+            "type": "docs",
+            "section": "📃文档"
+          }
+        ]
+      },
       "infile": "CHANGELOG.md"
     }
   },
   "git": {
-    "commitMessage": "chore: Release v${version}"
+    "commitMessage": "chore: release v${version}",
+    "requireCleanWorkingDir": false
   },
   "github": {
     "release": true,
