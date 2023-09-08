@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# 每次提交commit前都会按照lint规则修复，如果无法修复，则抛出错误
+npm run lint

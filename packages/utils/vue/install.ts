@@ -1,4 +1,4 @@
-import type { SFCWithInstall } from "./typescript";
+import type { SFCWithInstall } from './typescript';
 
 export const withInstall = <T, E extends Record<string, any>>(
   main: T, // 主要组件对象，通常是一个Vue组件

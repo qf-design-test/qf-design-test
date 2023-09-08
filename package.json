@@ -5,21 +5,30 @@
   "main": "index.js",
   "scripts": {
     "build:components": "gulp -f script/build/index.ts",
-    "publish:components": "gulp -f script/publish/index.ts"
+    "publish:components": "gulp -f script/publish/index.ts",
+    "lint": "eslint --ext .vue,.ts --fix --quiet ./",
+    "prepare": "husky install"
   },
   "author": "wangkai",
   "license": "ISC",
   "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
     "@types/gulp": "^4.0.13",
     "@types/gulp-autoprefixer": "^0.0.34",
     "@types/gulp-less": "^0.0.33",
     "@types/node": "^20.5.9",
     "@vitejs/plugin-vue": "^4.3.4",
     "@vue/runtime-core": "^3.3.4",
+    "eslint": "^8.48.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-less": "^5.0.0",
+    "husky": "^8.0.3",
     "less": "^4.2.0",
+    "prettier": "^3.0.3",
     "release-it": "^16.1.5",
     "sucrase": "^3.34.0",
     "typescript": "^5.2.2",
@@ -27,5 +36,10 @@
     "vite": "^4.4.9",
     "vite-plugin-dts": "1.4.1",
     "vue": "^3.2.36"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "@typescript-eslint/parser": "^6.6.0",
+    "eslint-plugin-vue": "^9.17.0"
   }
 }

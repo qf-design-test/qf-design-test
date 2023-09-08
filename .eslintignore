@@ -1,0 +1,4 @@
+**.d.ts
+/packages/qf-design
+dist
+node_modules
