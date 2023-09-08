@@ -101,10 +101,6 @@ importers:
         version: 3.2.36
 
   docs:
-    dependencies:
-      qf-design-test:
-        specifier: 0.5.0
-        version: 0.5.0
       vue:
         specifier: ^3.3.4
         version: 3.3.4
@@ -118,20 +114,6 @@ importers:
   packages/qf-design: {}
 
   packages/utils: {}
-
-  play:
-    dependencies:
-      qf-design-test:
-        specifier: workspace:^
-        version: link:../packages/qf-design
-    devDependencies:
-      '@vitejs/plugin-vue':
-        specifier: ^4.3.4
-        version: 4.3.4(vite@4.4.9)(vue@3.3.4)
-      vite:
-        specifier: ^4.4.9
-        version: 4.4.9(@types/node@20.5.9)(less@4.2.0)
-
 packages:
 
   /@aashutoshrathi/word-wrap@1.2.6:
