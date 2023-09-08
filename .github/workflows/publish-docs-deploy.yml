@@ -21,6 +21,7 @@ jobs:
           node: 16.14
       # 初始用的npm 打包时间太长了，就想着用yarn 结果没仔细看文档，yarn 不用安装 ubuntu 上面有的
       - name: install pnpm
-        run: npm install pnpm -g
-        run: pnpm install
-        run: pnpm run build:docs
+          run: |
+            npm install pnpm -g &&
+            pnpm install &&
+            pnpm run build:docs
