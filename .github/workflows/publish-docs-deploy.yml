@@ -19,15 +19,15 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node: 16.14
-      
-        - name: Update "qf-design-test" package version
+
+      - name: Update "qf-design-test" package version
         run: |
           LATEST_VERSION=$(npm view qf-design-test version)
           echo "Latest version of qf-design-test is $LATEST_VERSION"
           sed -i 's/"qf-design-test": ".*"/"qf-design-test": "'"$LATEST_VERSION"'"/' package.json
         shell: bash
       # 初始用的npm 打包时间太长了，就想着用yarn 结果没仔细看文档，yarn 不用安装 ubuntu 上面有的
-      - name: Install pnpm 
+      - name: Install pnpm
         run: |
           npm install pnpm -g &&
           pnpm install
