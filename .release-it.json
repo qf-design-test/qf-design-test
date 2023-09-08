@@ -1,4 +1,3 @@
-// .release-it.json
 {
   "plugins": {
     "@release-it/conventional-changelog": {
