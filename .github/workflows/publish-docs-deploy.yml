@@ -24,6 +24,7 @@ jobs:
           pnpm install
       - name: Build components
         run: pnpm run build:components
+jobs:
   BuildDoc:
     runs-on: ubuntu-latest
     steps:
