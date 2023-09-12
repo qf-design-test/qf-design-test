@@ -29,27 +29,8 @@ jobs:
         run:
           pnpm run build:components
           # 上传打包好的文件，所以下一步可以使用
-      - name: upload files
-        uses: actions/upload-artifact@v2
-        with:
-          name: build-pages
-          path: docs/.vitepress/dist
-          retention-days: 1
-  
-  Deploy: # 部署
-    needs: Build # 确保build 阶段完成
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout code
-        uses: actions/checkout@v2
-      - name: download build files
-        uses: actions/download-artifact@v2
-        with:
-          name: build-pages
-          path: docs/.vitepress/dist
       - name: deploy
         uses: JamesIves/github-pages-deploy-action@v4.2.3
         with:
-          branch: main
+          branch: gh-pages
           folder: docs/.vitepress/dist
-          token: '${{ secrets.DEPLOY_TOKEN }}'
