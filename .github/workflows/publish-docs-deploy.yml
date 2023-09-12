@@ -9,6 +9,7 @@ on:
 jobs:
   Build:
     runs-on: ubuntu-latest
+    environment: production
     steps:
       - name: Checkout code
         # 迁出触发的流程的版本 能让下面的工作流程访问 v2可以在不任务访问
