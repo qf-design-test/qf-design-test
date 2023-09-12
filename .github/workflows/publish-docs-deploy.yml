@@ -7,7 +7,7 @@ on:
       - main
 
 jobs:
-  BuildComponent:
+  PublishDocsDeploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -24,17 +24,5 @@ jobs:
           pnpm install
       - name: Build components
         run: pnpm run build:components
-jobs:
-  BuildDoc:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        # 迁出触发的流程的版本 能让下面的工作流程访问
-        uses: actions/checkout@v2
-        # setup-node 可以提供node环境，指定node版本以及 npm /yarn缓存
-      - name: Actions/setup-node@v2
-        uses: actions/setup-node@v2
-        with:
-          node: 16.14
       - name: Build docs
         run: pnpm run build:docs
