@@ -7,7 +7,7 @@ on:
       - main
 
 jobs:
-  PublishDocsDeploy:
+  Build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -22,7 +22,7 @@ jobs:
         run: |
           npm install pnpm -g &&
           pnpm install
-      - name: Build components
+      - name: Build Components💪🏻
         run: pnpm run build:components
-      - name: Build docs
-        run: pnpm run build:docs
+      - name: Build Docs💪🏻
+        run: pnpm run build:components
