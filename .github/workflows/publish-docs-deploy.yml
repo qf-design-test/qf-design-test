@@ -27,7 +27,7 @@ jobs:
         run: pnpm run build:components
       - name: Build Docs 💪🏻
         run:
-          pnpm run build:components
+          pnpm run build:docs
           # 上传打包好的文件，所以下一步可以使用
       - name: deploy 😄
         uses: JamesIves/github-pages-deploy-action@v4.2.3
