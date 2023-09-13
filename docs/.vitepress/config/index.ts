@@ -1,6 +1,7 @@
 import { nav } from "./nav";
 import { sidebar } from "./sidebar";
 export default {
+  base: process.env.NODE_ENV === 'production' ? '/qf-design-test/' : '/',
   title: "Qf Design 官方文档",
   themeConfig: {
     logo: "/logo2.png",

@@ -23,13 +23,13 @@ jobs:
         run: |
           npm install pnpm -g &&
           pnpm install
-      - name: Build Components💪🏻
+      - name: Build Components 💪🏻
         run: pnpm run build:components
-      - name: Build Docs💪🏻
+      - name: Build Docs 💪🏻
         run:
           pnpm run build:components
           # 上传打包好的文件，所以下一步可以使用
-      - name: deploy
+      - name: deploy 😄
         uses: JamesIves/github-pages-deploy-action@v4.2.3
         with:
           branch: gh-pages
