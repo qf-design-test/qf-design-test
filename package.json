@@ -7,6 +7,8 @@
     "build:components": "gulp -f script/build/build-components.ts",
     "build:docs": "pnpm run --filter docs build",
     "publish:components": "gulp -f script/publish/index.ts",
+    "dev:docs": "pnpm run --filter docs dev",
+    "dev:play": "pnpm run --filter play dev",
     "lint": "eslint --ext .vue,.ts --fix --quiet ./",
     "prepare": "husky install",
     "commit": "cz"

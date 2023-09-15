@@ -93,9 +93,8 @@
 
 ## 字段说明
 
-```ts
-interface ButtonProps {
-  /** 按钮类型 默认  |  主要*/
-  type: "default" | "primary";
-}
-```
+| 参数    | 说明   | 类型    | 可选值                                             | 默认值  |
+| ------- | ------ | ------- | -------------------------------------------------- | ------- |
+| size    | 尺寸   | string  | large / small / mini                               | default |
+| type    | 类型   | string  | primary / success / warning / info / danger / text | primary |
+| loading | 加载中 | boolean | —                                                  | false   |

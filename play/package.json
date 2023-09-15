@@ -14,6 +14,7 @@
     "vite": "^4.4.9"
   },
   "dependencies": {
+    "@qf/components": "workspace:^",
     "qf-design-test": "workspace:^"
   }
 }

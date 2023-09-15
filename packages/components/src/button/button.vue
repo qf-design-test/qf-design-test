@@ -7,6 +7,8 @@
   </button>
 </template>
 <script lang="ts" setup>
+import './style/index.less';
+
 // 在tsconfig type 中定义 unplugin-vue-define-options/macros-global
 defineOptions({ name: 'qf-button' });
 
@@ -14,7 +16,3 @@ defineProps<{
   type?: 'primary' | 'default';
 }>();
 </script>
-
-<style scoped lang="less">
-@import './style/index.less';
-</style>

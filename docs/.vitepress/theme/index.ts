@@ -1,11 +1,11 @@
-import DefaultTheme from "vitepress/theme";
-import qfDesignTest from "qf-design-test";
-
+import DefaultTheme from 'vitepress/theme';
+import qfDesignTest from 'qf-design-test';
+console.log(qfDesignTest)
 export default {
   ...DefaultTheme,
-  enhanceApp: async ({ app }: any) => {
+  enhanceApp: async (ctx: any) => {
     // app is the Vue 3 app instance from `createApp()`. router is VitePress'
     // custom router. `siteData`` is a `ref`` of current site-level metadata.
-    app.use(qfDesignTest);
-  },
+    ctx.app.use(qfDesignTest);
+  }
 };

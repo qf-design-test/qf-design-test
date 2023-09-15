@@ -63,7 +63,7 @@ const getSidebar = () => {
         items: [
           {
             text: "Button 按钮",
-            link: "/components/button/index",
+            link: "/component/button/index",
           },
         ],
       },
@@ -72,7 +72,7 @@ const getSidebar = () => {
         items: [
           {
             text: "Input 输入框",
-            link: "/components/input",
+            link: "/component/input",
           },
         ],
       },
@@ -81,7 +81,7 @@ const getSidebar = () => {
         items: [
           {
             text: "Card 卡片",
-            link: "/components/button",
+            link: "/component/button",
           },
         ],
       },
@@ -90,7 +90,7 @@ const getSidebar = () => {
         items: [
           {
             text: "Tabs 标签页",
-            link: "/components/button",
+            link: "/component/tabs/index",
           },
         ],
       },
@@ -99,7 +99,7 @@ const getSidebar = () => {
         items: [
           {
             text: "Message 消息提示",
-            link: "/components/button",
+            link: "/component/button",
           },
         ],
       },
