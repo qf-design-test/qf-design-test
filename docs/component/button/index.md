@@ -29,8 +29,6 @@
     </div>
 </div>
 
-<details>
-<summary>展开查看</summary>
 
 ```vue
 <template>
@@ -41,8 +39,6 @@
   </div>
 </template>
 ```
-
-</details>
 
 ## 禁用状态
 
