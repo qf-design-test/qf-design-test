@@ -1,7 +1,7 @@
 const getNavs = () => [
   {
     text: "指南",
-    link: "/guide/design",
+    link: "/guide/introduce",
     activeMatch: "/guide/",
   },
   {

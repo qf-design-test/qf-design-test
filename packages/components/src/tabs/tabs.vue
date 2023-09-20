@@ -11,7 +11,8 @@
     <div
       class="qf-tabs__select"
       :style="{
-        transform: `translateX(${(width / data.length) * activeIndex}px)`
+        transform: `translateX(${(width / data.length) * activeIndex}px)`,
+        width: `${width / data.length}px`
       }"
     />
   </div>

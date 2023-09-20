@@ -5,8 +5,8 @@ const getSidebar = () => {
         text: "基础",
         items: [
           {
-            text: "设计",
-            link: "/guide/design",
+            text: "介绍",
+            link: "/guide/introduce",
           },
           {
             text: "导航",

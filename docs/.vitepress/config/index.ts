@@ -1,5 +1,8 @@
 import { nav } from './nav';
 import { sidebar } from './sidebar';
+import { containerPreview, componentPreview } from '@vitepress-demo-preview/plugin'
+
+
 export default {
   base: process.env.NODE_ENV === 'production' ? '/qf-design-test/' : '/',
   title: 'Qf Design 官方文档',
@@ -32,10 +35,16 @@ export default {
     pt: { label: 'Português' },
     ko: { label: '한국어' }
   },
+  // markdown: {
+  //   theme: {
+  //     light: 'vitesse-light',
+  //     dark: 'vitesse-dark'
+  //   }
+  // },
   markdown: {
-    theme: {
-      light: 'vitesse-light',
-      dark: 'vitesse-dark'
+    config(md) {
+      md.use(containerPreview)
+      md.use(componentPreview)
     }
   },
   // vite: {

@@ -46,6 +46,8 @@
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^6.6.0",
     "@typescript-eslint/parser": "^6.6.0",
+    "@vitepress-demo-preview/component": "^2.3.2",
+    "@vitepress-demo-preview/plugin": "^1.2.2",
     "cz-conventional-changelog": "^3.3.0",
     "eslint-plugin-vue": "^9.17.0"
   },
