@@ -22,23 +22,7 @@
 
 使用 <code>type</code>来定义按钮的样式。
 
-<div class="example">
-    <div>
-        <qf-button>默认按钮</qf-button>
-        <qf-button type="primary">主要按钮</qf-button>
-    </div>
-</div>
 
-
-```vue
-<template>
-  <div>
-    <qf-button>默认按钮</qf-button>
-    <qf-button type="primary">主要按钮</qf-button>
-    <qf-button type="success">成功按钮</qf-button>
-  </div>
-</template>
-```
 
 ## 禁用状态
 

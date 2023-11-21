@@ -13,8 +13,6 @@
   </div>
 </template>
 <script setup lang="ts">
-defineOptions({ name: 'ex-tabs' });
-
 import { ref } from 'vue';
 
 const num = ref('1');

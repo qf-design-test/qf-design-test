@@ -20,7 +20,7 @@
 
 <script setup lang="ts">
 import { Tab } from './tabs';
-import './style/index.less';
+// import './style/index.less';
 import { computed } from 'vue';
 defineOptions({ name: 'qf-tabs' });
 

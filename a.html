@@ -6,22 +6,9 @@
     <title>Document</title>
   </head>
   <body>
+    <div id="app"></div>
     <script>
-      function countJumpWays(n) {
-        if (n < 0) {
-          return 0;
-        } else if (n === 0) {
-          return 1;
-        }
-
-        return (
-          countJumpWays(n - 1) + countJumpWays(n - 2) + countJumpWays(n - 3)
-        );
-      }
-
-      const n = 6;
-      const result = countJumpWays(n);
-      console.log(`跳完${n}格的不同方法数量为: ${result}`);
+      document.getElementById('app').innerHTML = '你好vue'
     </script>
   </body>
 </html>

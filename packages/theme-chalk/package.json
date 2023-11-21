@@ -1,0 +1,19 @@
+{
+  "name": "theme-chalk",
+  "version": "0.0.1",
+  "description": "",
+  "main": "lib/index.css",
+  "style": "lib/index.css",
+  "type": "module",
+  "scripts": {
+    "build": "gulp build"
+  },
+  "author": "wangkai",
+  "license": "MIT",
+  "dependencies": {
+    "cssmin": "^0.4.3",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-cssmin": "^0.2.0"
+  }
+}
