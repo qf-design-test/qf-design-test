@@ -26,8 +26,8 @@ export const buildStyle = async () => {
 export const copyFullStyle = async () => {
   await mkdir(path.resolve(pkgPath, 'dist'), { recursive: true });
   await copyFile(
-    path.resolve(pkgPath, 'theme-chalk/index.css'),
-    path.resolve(pkgPath, 'dist/index.css')
+    path.resolve(pkgPath, 'theme-chalk/dist/index.css'),
+    path.resolve(pkgPath, 'qf-design/index.css')
   );
 };
 

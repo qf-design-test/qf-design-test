@@ -4,7 +4,7 @@ export const zh: DefaultTheme.NavItem[] = [
   {
     text: '指南',
     link: '/guide/introduce',
-    activeMatch: '/guide/'
+    activeMatch: '/guide/',
   },
   {
     text: '组件',
