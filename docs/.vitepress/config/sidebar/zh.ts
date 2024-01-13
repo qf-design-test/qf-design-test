@@ -15,8 +15,17 @@ export const zh: DefaultTheme.NavItem[] = [
   },
   {
     text: '组件',
-    link: '/component/button/index',
-    activeMatch: '/component/'
+    activeMatch: '/component/',
+    items: [
+      {
+        text: 'Button 按钮',
+        link: '/component/button/index'
+      },
+      {
+        text: 'Tabs 标签页',
+        link: '/component/tabs/index'
+      }
+    ]
   },
   {
     text: '资源',

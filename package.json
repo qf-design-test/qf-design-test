@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:components": "gulp -f script/build/build-components.ts",
+    "dev": "gulp -f script/dev/serve.ts",
+    "build:components": "gulp --cwd . --gulpfile script/build/build-components.ts",
     "build:docs": "pnpm run --filter docs build",
     "publish:components": "gulp -f script/publish/index.ts",
     "dev:docs": "pnpm run --filter docs dev",

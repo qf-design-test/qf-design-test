@@ -1,3 +1,24 @@
+// 这里定义的是全局的变量，可以考虑加编译变量来改变
+
+// 背景
+@primary-color: #1890ff;
+@success-color: #52c41a;
+@warning-color: #fadb14;
+@danger-color: #f5222d;
+@info-color: #8c8c8c;
+
+// 字体
+@font-size: 14px; 
+
+
 :root {
-  --primary-color: #1890ff
+  --primary-color: @primary-color;
+  --success-color: @success-color;
+  --warning-color: @warning-color;
+  --danger-color: @danger-color;
+  --info-color: @info-color;
+
+  --font-size: @font-size;
+
+  --active-bg-color: @primary-color;
 }

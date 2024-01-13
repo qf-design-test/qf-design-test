@@ -8,7 +8,6 @@ function compile() {
     .pipe(less())
     .pipe(
       autoprefixer({
-        browsers: ['ie > 9', 'last 2 versions'],
         cascade: false
       })
     )

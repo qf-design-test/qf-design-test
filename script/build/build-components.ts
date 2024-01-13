@@ -19,8 +19,7 @@ export const buildStyle = async () => {
   //   .pipe(autoprefixer())
   //   .pipe(dest(`${pkgPath}/qf-design/lib/src`))
   //   .pipe(dest(`${pkgPath}/qf-design/es/src`));
-
-  run('pnpm run build', themePath);
+  return run('pnpm run build', themePath);
 };
 
 export const copyFullStyle = async () => {
