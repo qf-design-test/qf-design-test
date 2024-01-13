@@ -1,5 +1,6 @@
 // import { ExtractPropTypes } from 'vue'
 
 export interface ButtonProps {
-  type: 'primary' | 'default';
+  type?: 'primary' | 'success' | 'warning' | 'danger' | 'info';
+  disabled?: boolean;
 }
