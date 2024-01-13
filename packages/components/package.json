@@ -5,9 +5,20 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "build": "vite build"
+    "build": "vite build",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@vitest/coverage-v8": "^1.2.0",
+    "@vue/test-utils": "^2.4.3",
+    "happy-dom": "^13.0.4",
+    "vitest": "^1.2.0"
+  },
+  "dependencies": {
+    "vue": "^3.4.12"
+  }
 }

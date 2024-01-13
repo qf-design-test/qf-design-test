@@ -12,7 +12,9 @@
     "dev:play": "pnpm run --filter play dev",
     "lint": "eslint --ext .vue,.ts --fix --quiet ./",
     "prepare": "husky install",
-    "commit": "cz"
+    "commit": "cz",
+    "test": "pnpm --filter @qf/components test",
+    "coverage": "pnpm --filter @qf/components coverage"
   },
   "author": "wangkai",
   "license": "MIT",
