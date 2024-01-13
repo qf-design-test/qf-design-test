@@ -24,6 +24,10 @@ export const zh: DefaultTheme.NavItem[] = [
       {
         text: 'Tabs 标签页',
         link: '/component/tabs/index'
+      },
+      {
+        text: 'Layout 布局',
+        link: '/component/layout/index'
       }
     ]
   },

@@ -35,4 +35,11 @@ export const buildComponent = async () => {
   run('pnpm run build', componentPath);
 };
 
-export default series(removeDist, buildComponent, buildStyle, copyFullStyle);
+const build: ReturnType<typeof series> = series(
+  removeDist,
+  buildComponent,
+  buildStyle,
+  copyFullStyle
+);
+
+export default build;

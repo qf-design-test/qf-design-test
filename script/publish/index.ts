@@ -7,4 +7,9 @@ export const publishComponents = async () => {
   run('release-it', `${pkgPath}/qf-design/`);
 };
 
-export default series(buildComponent, publishComponents);
+const build: ReturnType<typeof series> = series(
+  buildComponent,
+  publishComponents
+);
+
+export default build;

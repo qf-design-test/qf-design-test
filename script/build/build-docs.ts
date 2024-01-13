@@ -8,4 +8,6 @@ export const buildDocs = async () => {
   run('pnpm run build', docsPath);
 };
 
-export default series(buildComponent, buildDocs);
+const build: ReturnType<typeof series> = series(buildComponent, buildDocs);
+
+export default build;

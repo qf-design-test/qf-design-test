@@ -47,9 +47,9 @@ export default defineConfig({
     vue(),
     dts({
       entryRoot: 'src',
-      outputDir: ['../qf-design/es/src', '../qf-design/lib/src'],
+      outDir: ['../qf-design/es/src', '../qf-design/lib/src'],
       //指定使用的tsconfig.json为我们整个项目根目录下,如果不配置,你也可以在components下新建tsconfig.json
-      tsConfigFilePath: '../../tsconfig.json'
+      tsconfigPath: '../../tsconfig.json'
     }),
     DefineOptions(),
     {

@@ -11,7 +11,11 @@ const rootDir = path.join(__dirname, '../../');
 
 export default () => {
   console.log('开启文件Watch');
-  watch(['packages/components/**/*.ts'], { cwd: rootDir }, buildComponent);
+  watch(
+    ['packages/components/**/*.(ts|vue)'],
+    { cwd: rootDir },
+    buildComponent
+  );
 
   watch(
     ['packages/theme-chalk/src/*.less'],

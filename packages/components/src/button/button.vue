@@ -11,7 +11,7 @@
   </button>
 </template>
 <script lang="ts" setup>
-import { ButtonProps } from './button';
+import type { ButtonProps } from './button';
 import { useButton } from './use-button';
 
 // import './style/index.less';

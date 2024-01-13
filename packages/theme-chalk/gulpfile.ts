@@ -15,4 +15,4 @@ function compile() {
     .pipe(dest('./dist'));
 }
 
-export const build = series(compile);
+export const build: ReturnType<typeof series> = series(compile);
