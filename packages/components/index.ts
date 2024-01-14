@@ -1,7 +1,7 @@
 import { App } from 'vue';
-import { Button, Tabs, Row, Col } from './src';
+import { Button, Tabs, Row, Col, Checkbox } from './src';
 
-const components = [Button, Tabs, Row, Col];
+const components = [Button, Tabs, Row, Col, Checkbox];
 
 export default {
   install: (app: App) => {

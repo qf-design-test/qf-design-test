@@ -1,7 +1,7 @@
 @row: 24;
 
 .qf-col {
-    border-radius: 4px;
+    border-radius: var(--col-border-radius);
     each(range(@row), {
       &-@{value} {
         flex: 0 0 percentage((@value / @row));

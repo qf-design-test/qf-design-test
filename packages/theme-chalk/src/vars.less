@@ -1,14 +1,20 @@
 // 这里定义的是全局的变量，可以考虑加编译变量来改变
 
-// 背景
 @primary-color: #1890ff;
 @success-color: #52c41a;
 @warning-color: #fadb14;
 @danger-color: #f5222d;
 @info-color: #8c8c8c;
+@disabled-color: #a6a5a5;
+
+@border-radius: 4px;
 
 // 字体
 @font-size: 14px; 
+
+
+// 布局
+
 
 
 :root {
@@ -17,8 +23,16 @@
   --warning-color: @warning-color;
   --danger-color: @danger-color;
   --info-color: @info-color;
+  --disabled-color: @disabled-color;
+  --border-radius: @border-radius;
 
   --font-size: @font-size;
 
   --active-bg-color: @primary-color;
+
+  --col-border-radius: var(--border-radius);
+
+  --checkbox-checked-color: var(--primary-color);
+  --checkbox-disabled-color: var(--disabled-color);
+  --checkbox-border-radius: var(--border-radius);
 }

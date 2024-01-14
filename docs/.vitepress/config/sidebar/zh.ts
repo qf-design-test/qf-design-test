@@ -28,6 +28,10 @@ export const zh: DefaultTheme.NavItem[] = [
       {
         text: 'Layout 布局',
         link: '/component/layout/index'
+      },
+      {
+        text: 'Checkbox 多选框',
+        link: '/component/checkbox/index'
       }
     ]
   },
