@@ -25,3 +25,7 @@ export const withInstall = <T, E extends Record<string, any>>(
   // 返回增强后的主要组件对象，它包括 install 方法和额外的组件
   return main as SFCWithInstall<T> & E;
 };
+
+// zIndex递增
+let zIndex = 1000;
+export const useZIndex = () => zIndex++;
