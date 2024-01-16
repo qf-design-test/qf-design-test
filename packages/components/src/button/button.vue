@@ -14,12 +14,9 @@
 import type { ButtonProps } from './button';
 import { useButton } from './use-button';
 
-// import './style/index.less';
-
 // 在tsconfig type 中定义 unplugin-vue-define-options/macros-global
 defineOptions({ name: 'qf-button' });
 
 const props = defineProps<ButtonProps>();
-
 const { _props } = useButton(props);
 </script>
