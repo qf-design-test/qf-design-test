@@ -5,63 +5,21 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { computed, inject, ref, nextTick } from 'vue';
-import { CheckboxProps, checkboxContextKey } from './checkbox';
+import { CheckboxProps } from './checkbox';
+import { useCheckbox } from './use-checkbox';
 
 defineOptions({
   name: 'qf-checkbox'
 });
 
+// 通过withDefaults可以设置props的默认值
+// 参考文档: https://vuejs.org/api/sfc-script-setup.html#default-props-values-when-using-type-declaration
 const props = withDefaults(defineProps<CheckboxProps>(), {
   modelValue: undefined
 });
 
+// 定义需要触发的emit事件
 const emit = defineEmits(['change', 'update:modelValue']);
 
-const checkboxContext = inject(checkboxContextKey, undefined);
-const isGroup = computed(() => checkboxContext !== undefined);
-const selfModel = ref(false);
-
-const model = computed({
-  get() {
-    if (isGroup.value) {
-      return checkboxContext?.modelValue?.value;
-    }
-    return props.modelValue ?? selfModel.value;
-  },
-  set(val: boolean) {
-    if (isGroup.value) {
-      checkboxContext?.changeHandler(props.label);
-    } else {
-      emit('update:modelValue', val);
-      selfModel.value = val;
-    }
-  }
-});
-
-const isDisabled = computed(() => props.disabled);
-
-const isChecked = computed(() => {
-  if (Array.isArray(model.value)) {
-    return model.value.includes(props.label);
-  } else {
-    return model.value;
-  }
-});
-
-const classList = computed(() => {
-  return [
-    'qf-checkbox',
-    props.disabled ? `qf-checkbox--disabled` : '',
-    isChecked.value ? `qf-checkbox--checked` : ''
-  ];
-});
-
-const handleUpdate = async () => {
-  if (isDisabled.value) return;
-  model.value = !model.value;
-
-  await nextTick();
-  emit('change', model.value);
-};
+const { classList, handleUpdate } = useCheckbox(props, emit);
 </script>
