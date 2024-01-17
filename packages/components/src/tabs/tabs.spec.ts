@@ -3,6 +3,7 @@ import { describe, expect, it } from 'vitest';
 import Tabs from './tabs.vue';
 
 describe('Tabs 组件', () => {
+  // 检测tabs组件是否正常创建
   it('create', () => {
     const wrapper = mount(Tabs, {
       props: {
