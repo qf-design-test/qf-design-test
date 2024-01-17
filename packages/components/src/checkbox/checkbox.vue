@@ -21,5 +21,6 @@ const props = withDefaults(defineProps<CheckboxProps>(), {
 // 定义需要触发的emit事件
 const emit = defineEmits(['change', 'update:modelValue']);
 
-const { classList, handleUpdate } = useCheckbox(props, emit);
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const { classList, handleUpdate, model } = useCheckbox(props, emit);
 </script>

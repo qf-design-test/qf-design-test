@@ -1,19 +1,11 @@
-import { defineModel, provide, computed } from 'vue';
+import { provide, computed, ModelRef } from 'vue';
 import { CheckboxGroupProps, checkboxContextKey } from './checkbox';
 
 export const useCheckboxGroup = (
   props: CheckboxGroupProps,
-  emit: (event: 'change' | 'update:modelvalue', ...args: any[]) => void
+  emit: (event: 'change' | 'update:modelvalue', ...args: any[]) => void,
+  model: ModelRef<string[], string>
 ) => {
-  // 通过defineModel可以获取到 v-model 传递过来的值，并且可以方便地进行更新
-  // 参考文档: https://cn.vuejs.org/guide/components/v-model.html#basic-usage
-  const model = defineModel<string[]>({
-    // 通过这种方式，我们可以定义 v-model 的默认值
-    default() {
-      return [];
-    }
-  });
-
   // 这里定义change事件，
   // 当使用checkbox-group包住checkbox时，checkbox的值变化会触发该事件
   const changeHandler = (val: string) => {
