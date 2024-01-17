@@ -1,7 +1,6 @@
 import { mount } from '@vue/test-utils';
 import { describe, expect, it } from 'vitest';
 import Dialog from './dialog.vue';
-import { aw } from 'vitest/dist/reporters-trlZlObr';
 
 describe('Dialog 组件', () => {
   it('create', () => {
