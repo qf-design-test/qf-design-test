@@ -32,6 +32,10 @@ export const zh: DefaultTheme.NavItem[] = [
       {
         text: 'Checkbox 多选框',
         link: '/component/checkbox/index'
+      },
+      {
+        text: 'Dialog 对话框',
+        link: '/component/dialog/index'
       }
     ]
   },
