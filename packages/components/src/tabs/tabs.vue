@@ -1,7 +1,7 @@
 <template>
   <div class="qf-tabs" :style="{ width: width + 'px' }">
     <div
-      @click="handle(item.value)"
+      @click="handleUpdate(item.value)"
       class="qf-tabs_item"
       v-for="(item, index) in data"
       :key="index"
@@ -19,28 +19,12 @@
 </template>
 
 <script setup lang="ts">
-import { Tab } from './tabs';
-// import './style/index.less';
-import { computed } from 'vue';
+import { TabProps } from './tabs';
+import { useTab } from './use-tab';
+
 defineOptions({ name: 'qf-tabs' });
 
-const props = defineProps<{
-  data: Tab[];
-  activeKey?: string;
-  width: number;
-}>();
-
-const activeIndex = computed(() => {
-  if (!props.activeKey) {
-    return 0;
-  }
-  const index = props.data.findIndex((item) => item.value === props.activeKey);
-  return index;
-});
-
+const props = defineProps<TabProps>();
 const emit = defineEmits(['update:activeKey']);
-
-const handle = (val: string) => {
-  emit('update:activeKey', val);
-};
+const { activeIndex, handleUpdate } = useTab(props, emit);
 </script>
