@@ -23,6 +23,8 @@ jobs:
         run: |
           npm install pnpm -g &&
           pnpm install
+      - name: Unit Test
+        run: pnpm test
       - name: Build Components 💪🏻
         run: pnpm run build:components
       - name: Build Docs 💪🏻
