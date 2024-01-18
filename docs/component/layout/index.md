@@ -20,7 +20,7 @@
 
 <preview path="./layout-offset.vue" title="基础布局使用"></preview>
 
-## RoW 字段说明
+## RoW 字段
 
 | 参数    | 说明   | 类型    | 可选值                                             | 默认值  |
 | ------- | ------ | ------- | -------------------------------------------------- | ------- |
@@ -28,7 +28,7 @@
 | justify    | 栅格水平排列方式 | enum  | start/end/center/space-around/space-between/space-evenly | start |
 | align | 栅格垂直布局 | enum | top/middle/bottom | —                                                  |    |
 
-## Col 字段说明
+## Col 字段
 
 
 | 参数    | 说明   | 类型    | 可选值                                             | 默认值  |

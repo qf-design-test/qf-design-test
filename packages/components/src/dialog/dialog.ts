@@ -3,8 +3,6 @@ export interface DialogProps {
   visible?: boolean;
   // 对话框标题
   title?: string;
-  // 对话框宽度
-  width?: number | string;
   // 点击蒙层是否允许关闭
   closeOnClickMask?: boolean;
   // ok触发
