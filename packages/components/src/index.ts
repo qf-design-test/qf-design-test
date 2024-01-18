@@ -4,3 +4,4 @@ export * from './row';
 export * from './col';
 export * from './checkbox';
 export * from './dialog';
+export * from './slider';

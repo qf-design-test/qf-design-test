@@ -36,6 +36,10 @@ export const zh: DefaultTheme.NavItem[] = [
       {
         text: 'Dialog 对话框',
         link: '/component/dialog/index'
+      },
+      {
+        text: 'Slider 滑块',
+        link: '/component/slider/index'
       }
     ]
   },
