@@ -1,9 +1,42 @@
-### 自定义主题
+# 自定义主题
 
 
 QF Components 默认提供一套主题，CSS 命名采用 BEM 的风格，方便使用者覆盖样式。 
 
-#### 通过设置css变量 （运行时）
+
+## 覆盖CSS变量
+
+QF Components 自身定义了许多的css变量，你可以定义一个`override.css`文件直接进行覆盖
+
+```less
+// override.css
+
+// 注意这里要引入组件主题样式
+@import "qf-design-test/index.css";
+
+// 在这里覆盖全局的css变量
+:root {
+  --primary-color: red;
+}
+```
+然后在入口文件`main.ts`引入该文件
+
+```ts
+// main.ts
+import { createApp } from 'vue'
+import QFDesign from 'qf-deign'
+import './override.css'
+import App from './App.vue'
+
+const app = createApp(App)
+
+app.use(QFDesign)
+app.mount('#app')
+```
+
+
+
+## 动态设置
 
 
 QF Components 默认的主题使用了`css变量`来建立主题色体系，
@@ -13,58 +46,6 @@ QF Components 默认的主题使用了`css变量`来建立主题色体系，
 
 因此你可以通过代码修改`css变量`，从而达到改变主题色的效果。具体实现可以参考下面的实现
 
---- 
-<script setup>
-import { ref } from 'vue'
+<preview path="./dynamic-theme.vue" title="动态主题色"></preview>
 
-const container = ref()
-
-function setCssVar(prop, val, dom) {
-  dom.style.setProperty(prop, val)
-}
-
-function randomColor() {
-  const r = Math.floor(Math.random()*255)
-  const g = Math.floor(Math.random()*255)
-  const b = Math.floor(Math.random()*255)
-  return `rgba(${r}, ${g}, ${b}, 0.8)`
-}
-
-function toggleTheme() {
-  setCssVar('--primary-color', randomColor(), container.value)
-}
-</script>
-
-<div ref='container'>
-  <qf-button @click="toggleTheme">切换主题色</qf-button>
-</div>
-
-```vue
-<template>
-  <div ref="container">
-    <qf-button @click="toggleTheme">切换主题色</qf-button>
-  </div>
-</template>
-<script setup>
-import { ref } from 'vue'
-
-const container = ref()
-
-function setCssVar(prop, val, dom) {
-  dom.style.setProperty(prop, val)
-}
-
-function randomColor() {
-  const r = Math.floor(Math.random()*255)
-  const g = Math.floor(Math.random()*255)
-  const b = Math.floor(Math.random()*255)
-  return `rgba(${r}, ${g}, ${b}, 0.8)`
-}
-
-function toggleTheme() {
-  setCssVar('--primary-color', randomColor(), container.value)
-}
-</script>
-```
-
-关于有哪些颜色变量，可以参考[这里](https://github.com/qf-design-test/qf-design-test/blob/78e48a1efc2e8d52e71049ceca2a9381fb50fef5/packages/theme-chalk/src/tabs.less#L3)
+关于有哪些颜色变量，可以参考[这里](https://github.com/qf-design-test/qf-design-test/blob/5fddc4112a7482fd53e276aa71bf498c8f9324ea/packages/theme-chalk/src/vars.less#L3)
