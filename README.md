@@ -2,7 +2,7 @@
   <img src="./docs/public/logo1.png">
 </p>
 
-![NPM Version](https://img.shields.io/npm/v/qf-design-test)
+[![NPM Version](https://img.shields.io/npm/v/qf-design-test)](https://www.npmjs.com/package/qf-design-test)
 ![GitHub License](https://img.shields.io/github/license/qf-design-test/qf-design-test)
 ![GitHub top language](https://img.shields.io/github/languages/top/qf-design-test/qf-design-test)
 ![GitHub Release](https://img.shields.io/github/v/release/qf-design-test/qf-design-test)
@@ -12,7 +12,7 @@
 ![NPM Downloads](https://img.shields.io/npm/dw/qf-design-test)
 ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/qf-design-test/qf-design-test)
 ![Website](https://img.shields.io/website?url=https%3A%2F%2Fqf-design-test.github.io%2Fqf-design-test%2F)
-![Codecov](https://img.shields.io/codecov/c/github/qf-design-test/qf-design-test)
+[![Codecov](https://img.shields.io/codecov/c/github/qf-design-test/qf-design-test)](https://app.codecov.io/github/qf-design-test/qf-design-test)
 
 
 > 一个基于vue3.0的组件库
