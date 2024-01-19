@@ -20,8 +20,7 @@
     </p>
 
     <p>
-      <qf-slider v-model="percent">
-      </qf-slider>
+      <qf-slider v-model="percent"> </qf-slider>
     </p>
   </div>
 </template>
@@ -53,7 +52,6 @@ function toggleTheme() {
   setCssVar('--checkbox-checked-color', color, container.value);
 }
 </script>
-
 
 <style>
 .theme-container p {
