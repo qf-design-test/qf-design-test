@@ -40,6 +40,10 @@ export const zh: DefaultTheme.NavItem[] = [
       {
         text: 'Slider 滑块',
         link: '/component/slider/index'
+      },
+      {
+        text: 'Message 消息通知',
+        link: '/component/message/index'
       }
     ]
   },

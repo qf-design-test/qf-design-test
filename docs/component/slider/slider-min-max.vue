@@ -15,8 +15,8 @@
 </template>
 
 <script lang="ts" setup>
-import {ref} from "vue";
+import { ref } from 'vue';
 
-const percent1 = ref(30)
-const percent2 = ref(0)
+const percent1 = ref(30);
+const percent2 = ref(0);
 </script>

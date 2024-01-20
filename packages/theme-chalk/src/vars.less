@@ -2,7 +2,7 @@
 
 @primary-color: #1890ff;
 @success-color: #52c41a;
-@warning-color: #fadb14;
+@warning-color: #f8dc3a;
 @danger-color: #f5222d;
 @info-color: #8c8c8c;
 @disabled-color: #d1d1d1;
@@ -12,6 +12,7 @@
 @border-color: #ddd;
 
 // 字体
+@font-color: #333;
 @font-size: 14px;
 @title-font-size: 20px;
 @title-font-weight: 600;
@@ -32,6 +33,7 @@
   --border-color: @border-color;
 
   --font-size: @font-size;
+  --font-color: @font-color;
   --title-font-size: @title-font-size;
   --title-font-weight: @title-font-weight;
 
@@ -50,4 +52,12 @@
   --dialog-content-font-size: var(--font-size);
   --dialog-padding-primary: 20px;
   --dialog-border-radius: var(--border-radius);
+
+
+  --message-width: 30%;
+  --message-font-size: var(--font-size);
+  --message-font-color: var(--font-color);
+  --message-bg-color: var(--bg-color);
+  --message-border-radius: var(--border-radius);
+  --message-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }

@@ -1,0 +1,49 @@
+@import "vars";
+
+.qf-message {
+  background-color: var(--message-bg-color);
+  padding: 12px;
+  box-shadow: var(--message-box-shadow); /* 添加阴影效果 */
+  border-radius: var(--message-border-radius);
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%);
+  width: var(--message-width);
+  max-width: var(--message-width);
+  color: var(--message-font-color);
+  display: flex;
+  font-size: var(--message-font-size);
+  justify-content: space-between;
+
+  &--success {
+    // less 函数
+    // https://lesscss.org/functions/
+    --message-bg-color: lighten(@success-color, 80%, relative);
+    --message-font-color: var(--success-color);
+  }
+
+  &--info {
+    --message-bg-color: lighten(@info-color, 60%, relative);
+    --message-font-color: var(--info-color);
+  }
+
+  &--warning {
+    --message-bg-color: lighten(@warning-color, 60%, relative);
+    --message-font-color: var(--warning-color);
+  }
+
+  &--error {
+    --message-bg-color: lighten(@danger-color, 60%, relative);
+    --message-font-color: var(--danger-color);
+  }
+
+
+  &-fade-enter-active, &-fade-leave-active {
+    transition: all 0.5s;
+  }
+
+  &-fade-enter, &-fade-leave-to {
+    opacity: 0;
+    transform: translate(-50%, -10px);
+  }
+}

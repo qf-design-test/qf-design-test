@@ -5,3 +5,4 @@ export * from './col';
 export * from './checkbox';
 export * from './dialog';
 export * from './slider';
+export * from './message';
