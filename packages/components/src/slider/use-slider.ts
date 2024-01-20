@@ -7,7 +7,7 @@ export const useSlider = (
   container: Ref<null>
 ) => {
   const percent = ref(0);
-  const { min, max } = props;
+  const { min, max, disabled } = props;
 
   // 挂载时同步modeValue到内部变量，保证v-model不传依然能够正常渲染
   onMounted(() => {
@@ -47,6 +47,7 @@ export const useSlider = (
 
   // 鼠标按下事件，按下后绑定 mousemove事件及mouseup事件到 document，同时将拖动标识设为true
   const onMouseDown = () => {
+    if (disabled) return;
     dragging = true;
     document.addEventListener('mousemove', mousemoveEvent);
     document.addEventListener('mouseup', onMouseUp);
@@ -54,6 +55,7 @@ export const useSlider = (
 
   // 鼠标释放事件，解除绑定 mousemove事件及mouseup事件，同时将拖动标识设为false
   const onMouseUp = () => {
+    if (disabled) return;
     document.removeEventListener('mousemove', mousemoveEvent);
     document.removeEventListener('mouseup', onMouseDown);
     dragging = false;
@@ -73,10 +75,15 @@ export const useSlider = (
     };
   });
 
+  const classList = computed(() => {
+    return ['qf-slider', disabled ? `qf-slider--disabled` : ''];
+  });
+
   return {
     onMouseDown,
     onMouseUp,
     btnStyle,
-    barStyle
+    barStyle,
+    classList
   };
 };

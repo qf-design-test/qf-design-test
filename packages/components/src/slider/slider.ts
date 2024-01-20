@@ -5,4 +5,6 @@ export interface SliderProps {
   min?: number;
   // 最大值
   max?: number;
+  // 是否禁用
+  disabled?: boolean;
 }

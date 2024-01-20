@@ -2,9 +2,11 @@
   width: 100%;
   position: relative;
 
+
   &__bar {
     background: var(--primary-color);
-    height: 12px;
+    height: 6px;
+    border-radius: var(--border-radius);
   }
   &__dragger {
     background: #fff;
@@ -16,5 +18,14 @@
     top: -8px;
     user-select: none;
     border-radius: 50%;
+  }
+
+  &--disabled {
+    .qf-slider__bar {
+      background: var(--disabled-color);
+    }
+    .qf-slider__dragger {
+      border-color: var(--disabled-color);
+    }
   }
 }

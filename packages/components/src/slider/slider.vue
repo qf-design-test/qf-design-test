@@ -1,5 +1,5 @@
 <template>
-  <div class="qf-slider" ref="container">
+  <div :class="classList" ref="container">
     <div class="qf-slider__bar" :style="barStyle"></div>
     <div
       class="qf-slider__dragger"
@@ -27,12 +27,13 @@ const model = defineModel({
 
 const props = withDefaults(defineProps<SliderProps>(), {
   min: 0,
-  max: 100
+  max: 100,
+  disabled: false
 });
 
 const container = ref(null);
 
-const { btnStyle, barStyle, onMouseDown, onMouseUp } = useSlider(
+const { btnStyle, barStyle, classList, onMouseDown, onMouseUp } = useSlider(
   props,
   model,
   container

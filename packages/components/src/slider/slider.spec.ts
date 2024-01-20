@@ -23,4 +23,14 @@ describe('Slider 组件', () => {
       'left: 30%;'
     );
   });
+
+  it('disabled', async () => {
+    const wrapper = mount(Slider, {
+      props: {
+        disabled: true
+      }
+    });
+
+    expect(wrapper.classes()).toContain('qf-slider--disabled');
+  });
 });
