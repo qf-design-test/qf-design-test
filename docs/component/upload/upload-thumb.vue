@@ -11,7 +11,6 @@
 
 <script setup lang="ts">
 import { shallowRef } from 'vue';
-import { Message } from 'qf-design-test';
 
 // 将文件转化base64
 function fileToBase64(file) {

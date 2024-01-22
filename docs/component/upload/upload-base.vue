@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import {shallowRef} from "vue";
+import { shallowRef } from 'vue';
 
 const handleUpload = async ({ file }) => {
   return Promise.resolve({
@@ -21,5 +21,5 @@ const fileList = shallowRef([
     id: 1,
     name: 'xxx.json'
   }
-])
+]);
 </script>
