@@ -15,6 +15,7 @@ export const useInput = (
   });
 
   watch(selfModel, (val: string) => {
+    console.log(12123123, val);
     model.value = val; // 监听内部维护的输入框值变化，并同步到 v-model 绑定的值
     emit('change', val); // 触发 change 事件，通知父组件输入框值发生变化
   });

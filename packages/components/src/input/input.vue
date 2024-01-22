@@ -51,6 +51,4 @@ const { closable, onClose, classList, selfModel, onFocus, onBlur } = useInput(
   model,
   emit
 );
-
-console.log('closable', closable);
 </script>
