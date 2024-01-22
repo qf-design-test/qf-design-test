@@ -7,12 +7,23 @@ import {
   Checkbox,
   Dialog,
   Slider,
-  Message
+  Message,
+  Input
 } from './src';
 
-const components = [Button, Tabs, Row, Col, Checkbox, Dialog, Slider, Message];
+const components = [
+  Button,
+  Tabs,
+  Row,
+  Col,
+  Checkbox,
+  Dialog,
+  Slider,
+  Message,
+  Input
+];
 
-export { Button, Tabs, Row, Col, Checkbox, Dialog, Slider, Message };
+export { Button, Tabs, Row, Col, Checkbox, Dialog, Slider, Message, Input };
 export default {
   install: (app: App) => {
     for (const c in components) {
