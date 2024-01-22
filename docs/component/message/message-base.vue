@@ -4,10 +4,10 @@
   </div>
 </template>
 <script setup lang="ts">
-import { Message } from 'qf-design-test'
+import { Message } from 'qf-design-test';
 const openMessage = () => {
   Message({
     message: 'Hello World'
-  })
-}
+  });
+};
 </script>

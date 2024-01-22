@@ -10,7 +10,7 @@
 import { Message } from 'qf-design-test';
 const openSuccess = () => {
   Message.success({
-    message: 'Hello World',
+    message: 'Hello World'
   });
 };
 

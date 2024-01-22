@@ -26,7 +26,7 @@ const QFMessage = (options: MessageOptions = {}) => {
       delay, // 延迟时间
       appendTo, // 添加到的位置
       type,
-        showClose,
+      showClose,
       onClose() {
         // 关闭时需要清除掉当前实例
         const idx = instances.findIndex((item) => item.id === currentMsgId);
