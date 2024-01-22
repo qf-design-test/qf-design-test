@@ -38,6 +38,10 @@ export const zh: DefaultTheme.NavItem[] = [
         link: '/component/checkbox/index'
       },
       {
+        text: 'Upload 上传组件',
+        link: '/component/upload/index'
+      },
+      {
         text: 'Dialog 对话框',
         link: '/component/dialog/index'
       },

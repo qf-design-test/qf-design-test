@@ -8,7 +8,8 @@ import {
   Dialog,
   Slider,
   Message,
-  Input
+  Input,
+  Upload
 } from './src';
 
 const components = [
@@ -20,10 +21,22 @@ const components = [
   Dialog,
   Slider,
   Message,
-  Input
+  Input,
+  Upload
 ];
 
-export { Button, Tabs, Row, Col, Checkbox, Dialog, Slider, Message, Input };
+export {
+  Button,
+  Tabs,
+  Row,
+  Col,
+  Checkbox,
+  Dialog,
+  Slider,
+  Message,
+  Input,
+  Upload
+};
 export default {
   install: (app: App) => {
     for (const c in components) {

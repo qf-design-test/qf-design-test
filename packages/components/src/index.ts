@@ -7,3 +7,4 @@ export * from './dialog';
 export * from './slider';
 export * from './message';
 export * from './input';
+export * from './upload';

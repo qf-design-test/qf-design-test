@@ -46,7 +46,6 @@ const model = defineModel({
   default: ''
 });
 
-
 const { closable, onClose, classList, selfModel, onFocus, onBlur } = useInput(
   props,
   model,

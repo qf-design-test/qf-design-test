@@ -1,0 +1,25 @@
+<template>
+  <qf-upload :action="handleUpload" v-model="fileList" multiple>
+    <qf-button>点击上传</qf-button>
+  </qf-upload>
+</template>
+
+<script setup lang="ts">
+import {shallowRef} from "vue";
+
+const handleUpload = async ({ file }) => {
+  return Promise.resolve({
+    // 用随机数代替文件id
+    id: Math.floor(Math.random() * 10000),
+    // 文件名称
+    name: file.name
+  });
+};
+
+const fileList = shallowRef([
+  {
+    id: 1,
+    name: 'xxx.json'
+  }
+])
+</script>
