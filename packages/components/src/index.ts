@@ -9,3 +9,4 @@ export * from './message';
 export * from './input';
 export * from './upload';
 export * from './switch';
+export * from './transfer';

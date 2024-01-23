@@ -1,5 +1,5 @@
 import { withInstall } from './../../utils';
 import _Switch from './switch.vue';
 
-export const Swith = withInstall(_Switch);
-export default Swith;
+export const Switch = withInstall(_Switch);
+export default Switch;

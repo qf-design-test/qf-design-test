@@ -1,0 +1,45 @@
+.qf-transfer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: var(--font-size);
+
+    &-panel__header {
+        background-color: var(--transfer-panel-header-bg-color);
+        border-radius: var(--border-radius);
+        padding: 8px 16px;
+        margin: 0;
+        font-size: var(--font-size);
+        font-weight: bold;
+        border: 1px solid var(--transfer-panel-header-border-color);
+    }
+
+    &-panel__body {
+        border: 1px solid var(--border-color);
+        padding: 8px 16px;
+        list-style: none;
+        margin: 0;
+        width: var(--transfer-panel-body-width, 160px);
+        height: var(--transfer-panel-body-height, 260px);
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        li {
+            display: flex;
+            align-items: center;
+        }
+
+        .qf-checkbox {
+            margin-right: 6px;
+        }
+
+        .qf-input {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__actions {
+        display: inline-flex;
+        gap: 6px;
+    }
+}

@@ -34,6 +34,10 @@ export const zh: DefaultTheme.NavItem[] = [
         link: '/component/tabs/index'
       },
       {
+        text: 'Transfer 穿梭框',
+        link: '/component/transfer/index'
+      },
+      {
         text: 'Layout 布局',
         link: '/component/layout/index'
       },

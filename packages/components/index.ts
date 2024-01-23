@@ -10,7 +10,8 @@ import {
   Message,
   Input,
   Upload,
-  Swith
+  Switch,
+  Transfer
 } from './src';
 
 const components = [
@@ -24,7 +25,8 @@ const components = [
   Message,
   Input,
   Upload,
-  Swith
+  Switch,
+  Transfer
 ];
 
 export {
@@ -38,7 +40,8 @@ export {
   Message,
   Input,
   Upload,
-  Swith
+  Switch,
+  Transfer
 };
 
 export default {
