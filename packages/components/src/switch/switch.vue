@@ -11,7 +11,11 @@
       <!-- https://cn.vuejs.org/api/built-in-directives.html -->
       <span class="active-text" v-text="activeText" v-if="selfModel"></span>
       <span class="qf-switch__slider">
-        <svg viewBox="25 25 50 50" class="qf-switch__loading-icon" v-if="loading">
+        <svg
+          viewBox="25 25 50 50"
+          class="qf-switch__loading-icon"
+          v-if="loading"
+        >
           <circle cx="50" cy="50" r="20"></circle>
         </svg>
       </span>
