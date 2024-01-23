@@ -11,7 +11,8 @@ import {
   Input,
   Upload,
   Switch,
-  Transfer
+  Transfer,
+  Card
 } from './src';
 
 const components = [
@@ -26,7 +27,8 @@ const components = [
   Input,
   Upload,
   Switch,
-  Transfer
+  Transfer,
+  Card
 ];
 
 export {
@@ -41,7 +43,8 @@ export {
   Input,
   Upload,
   Switch,
-  Transfer
+  Transfer,
+  Card
 };
 
 export default {
