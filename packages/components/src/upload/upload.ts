@@ -1,8 +1,9 @@
-interface FileItem {
+export interface FileItem {
   id: number;
   name: string;
   thumbUrl?: string;
 }
+
 export interface UploadProps {
   multiple?: boolean;
   accept?: string;

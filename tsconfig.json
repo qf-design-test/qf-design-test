@@ -9,6 +9,9 @@
     "esModuleInterop": true,
     "moduleResolution": "node",
     "lib": ["esnext", "dom"],
-    "types": ["unplugin-vue-define-options/macros-global"]
+    "types": [
+      "unplugin-vue-define-options/macros-global",
+      "vitest/globals"
+    ]
   }
 }

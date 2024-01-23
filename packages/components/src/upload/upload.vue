@@ -48,7 +48,7 @@
 </template>
 
 <script lang="ts" setup>
-import { defineProps, defineModel, ref, defineEmits } from 'vue';
+import { defineModel, ref } from 'vue';
 import type { UploadProps } from './upload';
 import { useUpload } from './use-upload';
 
@@ -57,7 +57,7 @@ defineOptions({
 });
 
 const inputRef = ref();
-const emit = defineEmits(['exceed']);
+const emit = defineEmits(['exceed', 'error']);
 const props = withDefaults(defineProps<UploadProps>(), {
   maxFiles: Infinity
 });
