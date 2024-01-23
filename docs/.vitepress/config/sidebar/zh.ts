@@ -26,6 +26,10 @@ export const zh: DefaultTheme.NavItem[] = [
         link: '/component/input/index'
       },
       {
+        text: 'Switch 开关',
+        link: '/component/switch/index'
+      },
+      {
         text: 'Tabs 标签页',
         link: '/component/tabs/index'
       },

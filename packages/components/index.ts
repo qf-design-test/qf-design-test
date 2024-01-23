@@ -9,7 +9,8 @@ import {
   Slider,
   Message,
   Input,
-  Upload
+  Upload,
+  Swith
 } from './src';
 
 const components = [
@@ -22,7 +23,8 @@ const components = [
   Slider,
   Message,
   Input,
-  Upload
+  Upload,
+  Swith
 ];
 
 export {
@@ -35,8 +37,10 @@ export {
   Slider,
   Message,
   Input,
-  Upload
+  Upload,
+  Swith
 };
+
 export default {
   install: (app: App) => {
     for (const c in components) {
