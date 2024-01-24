@@ -73,6 +73,7 @@ export default defineConfig({
   ],
   // vitest config
   test: {
-    environment: 'happy-dom'
+    environment: 'happy-dom',
+    pool: 'forks'
   }
 });
