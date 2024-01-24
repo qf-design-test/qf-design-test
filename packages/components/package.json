@@ -7,7 +7,7 @@
   "scripts": {
     "build": "vite build",
     "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "coverage": "CI=true vitest run --coverage"
   },
   "keywords": [],
   "author": "",
