@@ -21,7 +21,7 @@ defineOptions({
 
 const props = withDefaults(
   defineProps<{
-    shadowType: 'always' | 'never' | 'hover';
+    shadowType?: 'always' | 'never' | 'hover';
   }>(),
   {
     shadowType: 'always'
