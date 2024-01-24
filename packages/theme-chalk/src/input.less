@@ -19,12 +19,13 @@
     display: none;
   }
 
-  &__inner:focus + &__close {
-    display: block;
-  }
 
   &--focus {
     --input-border-color: var(--active-border-color);
+
+    .qf-input__close {
+      display: block;
+    }
   }
 
   &--disabled {

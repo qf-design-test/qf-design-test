@@ -8,7 +8,12 @@
       v-model="selfModel"
       class="qf-input__inner"
     />
-    <i class="qf-input__close" v-if="closable" @click="onClose">
+    <i
+      class="qf-input__close"
+      @click="onClose"
+      @mousedown.prevent="noop"
+      v-if="closable"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         x="0px"
@@ -45,6 +50,8 @@ const props = withDefaults(defineProps<InputProps>(), {
 const model = defineModel({
   default: ''
 });
+
+const noop = () => {};
 
 const { closable, onClose, classList, selfModel, onFocus, onBlur } = useInput(
   props,
