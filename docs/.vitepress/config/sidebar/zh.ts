@@ -50,6 +50,10 @@ export const zh: DefaultTheme.NavItem[] = [
         link: '/component/checkbox/index'
       },
       {
+        text: 'Carousel 跑马灯',
+        link: '/component/carousel/index'
+      },
+      {
         text: 'Upload 上传组件',
         link: '/component/upload/index'
       },

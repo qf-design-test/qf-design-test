@@ -12,7 +12,8 @@ import {
   Upload,
   Switch,
   Transfer,
-  Card
+  Card,
+    Carousel,
 } from './src';
 
 const components = [
@@ -28,7 +29,8 @@ const components = [
   Upload,
   Switch,
   Transfer,
-  Card
+  Card,
+  Carousel,
 ];
 
 export {
@@ -44,7 +46,8 @@ export {
   Upload,
   Switch,
   Transfer,
-  Card
+  Card,
+  Carousel,
 };
 
 export default {

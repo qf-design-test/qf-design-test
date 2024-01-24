@@ -11,3 +11,4 @@ export * from './upload';
 export * from './switch';
 export * from './transfer';
 export * from './card';
+export * from './carousel';
