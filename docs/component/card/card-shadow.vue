@@ -1,6 +1,6 @@
 <template>
   <qf-row :gutter="10">
-    <qf-col span="8" >
+    <qf-col span="8">
       <qf-card>
         <div>
           <p>Hello! here is content</p>

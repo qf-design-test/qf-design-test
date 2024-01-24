@@ -13,5 +13,4 @@
     </template>
   </qf-card>
 </template>
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
