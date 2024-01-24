@@ -1,9 +1,7 @@
 <template>
   <qf-carousel pause-on-hover>
     <qf-carousel-item>
-      <div class="block">
-
-      </div>
+      <div class="block"></div>
     </qf-carousel-item>
     <qf-carousel-item>
       <div class="block">2</div>

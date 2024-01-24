@@ -4,4 +4,3 @@ export interface CarouselProps {
   autoplay?: boolean;
   pauseOnHover?: boolean;
 }
-

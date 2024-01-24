@@ -18,8 +18,6 @@ export const useCarousel = (props: CarouselProps, inner: Ref<HTMLElement>) => {
     return items.value.length;
   });
 
-
-
   const next = () => {
     clearInterval(timer);
     currentIndex.value = (currentIndex.value + 1) % items.value.length;

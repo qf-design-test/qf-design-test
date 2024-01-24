@@ -63,8 +63,5 @@ const props = withDefaults(defineProps<CarouselProps>(), {
 });
 
 const inner = ref();
-const { onMouseEnter, onMouseLeave, prev, next } = useCarousel(
-  props,
-  inner
-);
+const { onMouseEnter, onMouseLeave, prev, next } = useCarousel(props, inner);
 </script>

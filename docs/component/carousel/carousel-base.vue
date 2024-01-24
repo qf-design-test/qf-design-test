@@ -13,7 +13,6 @@
 </template>
 
 <style scoped>
-
 .block {
   width: 100%;
   height: 100%;

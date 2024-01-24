@@ -62,7 +62,7 @@ export const useTransfer = (
   });
 
   const rightDatasource = computed(() => {
-    return dataSource.value!.filter((a) =>
+    return model.value!.filter((a) =>
       a.label.includes(rightFilterStr.value)
     ); // 右侧数据源，根据搜索过滤字符串过滤
   });
