@@ -23,12 +23,12 @@ jobs:
         run: |
           npm install pnpm -g &&
           pnpm install
-      # - name: Unit test 🚀
-      #   run: pnpm test
-      # - name: Upload coverage reports to Codecov
-      #   uses: codecov/codecov-action@v3
-      #   env:
-      #     CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+      - name: Unit test 🚀
+        run: pnpm coverage
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v3
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
       - name: Build Components 💪🏻
         run: pnpm run build:components
       - name: Build Docs 💪🏻

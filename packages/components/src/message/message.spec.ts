@@ -27,6 +27,7 @@ describe('Message 组件', () => {
     });
     vi.runAllTimers(); // 运行所有定时器
     expect(wrapper.vm.selfVisible).toBeFalsy(); // 断言selfVisible属性为假
+    vi.useRealTimers();
   });
 
   // 测试偏移量
