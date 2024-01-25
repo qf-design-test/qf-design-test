@@ -1,9 +1,56 @@
 .qf-dropdown {
+    display: inline-flex;
+
+
     &__menus {
         position: fixed;
         box-shadow: 0px 0px 12px rgba(0, 0, 0, .12);
         border-radius: var(--dropdown-border-radius, var(--border-radius));
         width: 100px;
-        padding: 4px 10px;
-    }   
+        background-color: var(--dropdown-bg-color, var(--bg-color));
+        border: 1px solid var(--border-color);
+        nav {
+            list-style: none;
+        }
+
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            transform: rotate(45deg);
+            border: 1px solid var(--border-color);
+            top: -5px;
+            background: #fff;
+            left: 50%;
+            margin-left: -5px;
+            border-right: transparent;
+            border-bottom: transparent;
+        }
+    }
+
+    &__item {
+        margin: 10px 0;
+        text-align: center;
+        font-size: var(--dropdown-font-size, 14px);
+
+        &:not(&--disabled):hover {
+            color: var(--active-font-color);
+            cursor: pointer;
+        }
+
+        &--disabled {
+            cursor: not-allowed;
+            color: var(--disabled-color);
+        }
+    }
+}
+
+.qf-dropdown-fade-enter, .qf-dropdown-fade-leave-to {
+    opacity: 0;
+}
+
+.qf-dropdown-fade-enter-active, .qf-dropdown-fade-leave-active {
+    transition: opacity 0.5s;
 }

@@ -2,23 +2,35 @@
   <div class="qf-dropdown">
     <div
       @click="clickHandler"
-      @mouseenter="mouseHandler"
-      @mouseleave="mouseHandler"
+      @mouseenter="onMouseEnter"
+      @mouseleave="onMouseLeave"
       ref="anchor"
     >
       <slot />
     </div>
-    <div :style="style" v-show="visible" class="qf-dropdown__menus">
-      <nav>
-        <li
-          v-for="item in menus"
-          :key="item.key"
-          @click="emit('select', item.value)"
-        >
-          {{ item.label }}
-        </li>
-      </nav>
-    </div>
+    <transition name="qf-dropdown-fade">
+      <div
+        :style="style"
+        v-show="visible"
+        class="qf-dropdown__menus"
+        @mouseenter="onMouseEnter"
+        @mouseleave="onMouseLeave"
+      >
+        <nav ref="menuRef">
+          <li
+            v-for="item in menus"
+            :key="item.key"
+            @click="itemClick(item.value)"
+            :class="[
+              'qf-dropdown__item',
+              item.disabled ? 'qf-dropdown__item--disabled' : ''
+            ]"
+          >
+            {{ item.label }}
+          </li>
+        </nav>
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -33,15 +45,15 @@ defineOptions({
 
 const props = withDefaults(defineProps<DropdownProps>(), {
   data: () => [],
-  trigger: 'hover'
+  trigger: 'hover',
+  hideOnClick: true
 });
 const anchor = ref();
+const menuRef = ref();
 const emit = defineEmits(['select']);
 
-const { menus, clickHandler, mouseHandler, visible, style } = useDropdown(
-  props,
-  anchor
-);
+const { menus, clickHandler, onMouseLeave, onMouseEnter, visible, style, itemClick, computeStyle } =
+  useDropdown(props, anchor, menuRef, emit);
 
 console.log('menus', menus);
 </script>

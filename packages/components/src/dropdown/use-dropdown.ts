@@ -1,15 +1,43 @@
-import { ref, computed, Ref } from 'vue';
+import {ref, computed, Ref, watch, nextTick} from 'vue';
 import { DropdownProps } from './dropdown';
 import { useZIndex } from '../../utils';
 
-export const useDropdown = (props: DropdownProps, anchor: Ref<HTMLElement>) => {
+export const useDropdown = (
+  props: DropdownProps,
+  anchor: Ref<HTMLElement>,
+  menuRef: Ref<HTMLElement>,
+  emit: (event: 'select', ...args) => void
+) => {
   const visible = ref(false);
+  const style = ref({});
+  const computeStyle = () => {
+    if (!anchor.value && !visible.value) return {};
+    const { bottom, left, width } = anchor.value.getBoundingClientRect();
+    const { width: menuWidth } = menuRef.value.getBoundingClientRect();
+    style.value = {
+      zIndex: useZIndex(),
+      top: `${bottom + 6}px`,
+      left: `${left + width / 2 - menuWidth / 2}px`
+    };
+  };
 
-  const toggle = () => (visible.value = !visible.value);
+  watch(visible, () => {
+    nextTick(computeStyle)
+  });
 
-  const mouseHandler = () => {
-    if (props.trigger === 'hover') {
-      toggle();
+  const toggle = () => {
+    visible.value = !visible.value;
+  };
+
+  const onMouseEnter = () => {
+    if (props.trigger === 'hover' && !visible.value) {
+      visible.value = true;
+    }
+  };
+
+  const onMouseLeave = () => {
+    if (props.trigger === 'hover' && visible.value) {
+      visible.value = false;
     }
   };
 
@@ -19,24 +47,23 @@ export const useDropdown = (props: DropdownProps, anchor: Ref<HTMLElement>) => {
     }
   };
 
+  const itemClick = (value) => {
+    emit('select', value);
+    if (props.hideOnClick) {
+      toggle();
+    }
+  };
+
   const menus = computed(() => props.data);
-
-  const style = computed(() => {
-    if (!anchor.value) return {};
-    const { bottom, left } = anchor.value.getBoundingClientRect();
-
-    return {
-      zIndex: useZIndex(),
-      top: `${bottom + 10}px`,
-      left: `${left - 50}px`
-    };
-  });
 
   return {
     visible,
-    mouseHandler,
+    onMouseEnter,
+    onMouseLeave,
     clickHandler,
     menus,
-    style
+    style,
+    itemClick,
+    computeStyle
   };
 };
