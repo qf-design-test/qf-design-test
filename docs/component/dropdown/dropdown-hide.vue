@@ -12,7 +12,7 @@ const data = ref(
     key: index,
     label: `选项${index}`,
     value: index,
-    disabled: index === 2,
+    disabled: index === 2
   }))
 );
 </script>

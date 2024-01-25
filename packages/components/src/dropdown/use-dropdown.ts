@@ -1,4 +1,4 @@
-import {ref, computed, Ref, watch, nextTick} from 'vue';
+import { ref, computed, Ref, watch, nextTick } from 'vue';
 import { DropdownProps } from './dropdown';
 import { useZIndex } from '../../utils';
 
@@ -22,7 +22,7 @@ export const useDropdown = (
   };
 
   watch(visible, () => {
-    nextTick(computeStyle)
+    nextTick(computeStyle);
   });
 
   const toggle = () => {
@@ -63,7 +63,6 @@ export const useDropdown = (
     clickHandler,
     menus,
     style,
-    itemClick,
-    computeStyle
+    itemClick
   };
 };

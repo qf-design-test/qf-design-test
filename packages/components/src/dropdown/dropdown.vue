@@ -52,8 +52,15 @@ const anchor = ref();
 const menuRef = ref();
 const emit = defineEmits(['select']);
 
-const { menus, clickHandler, onMouseLeave, onMouseEnter, visible, style, itemClick, computeStyle } =
-  useDropdown(props, anchor, menuRef, emit);
+const {
+  menus,
+  clickHandler,
+  onMouseLeave,
+  onMouseEnter,
+  visible,
+  style,
+  itemClick
+} = useDropdown(props, anchor, menuRef, emit);
 
 console.log('menus', menus);
 </script>
