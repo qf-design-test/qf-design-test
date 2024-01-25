@@ -1,7 +1,5 @@
 <template>
-  <div :style="style"
-    :class="classList"
-  >
+  <div :style="style" :class="classList">
     <slot></slot>
   </div>
 </template>

@@ -57,11 +57,17 @@ defineOptions({
   name: 'qf-carousel'
 });
 
+const emit = defineEmits(['change']);
+
 const props = withDefaults(defineProps<CarouselProps>(), {
   autoplay: true,
-  interval: 5000
+  interval: 3000
 });
 
 const inner = ref();
-const { onMouseEnter, onMouseLeave, prev, next } = useCarousel(props, inner);
+const { onMouseEnter, onMouseLeave, prev, next } = useCarousel(
+  props,
+  inner,
+  emit
+);
 </script>
