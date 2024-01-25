@@ -12,3 +12,4 @@ export * from './switch';
 export * from './transfer';
 export * from './card';
 export * from './carousel';
+export * from './dropdown';

@@ -13,7 +13,8 @@ import {
   Switch,
   Transfer,
   Card,
-  Carousel
+  Carousel,
+  Dropdown
 } from './src';
 
 const components = [
@@ -30,7 +31,8 @@ const components = [
   Switch,
   Transfer,
   Card,
-  Carousel
+  Carousel,
+  Dropdown
 ];
 
 export {
@@ -47,7 +49,8 @@ export {
   Switch,
   Transfer,
   Card,
-  Carousel
+  Carousel,
+  Dropdown
 };
 
 export default {

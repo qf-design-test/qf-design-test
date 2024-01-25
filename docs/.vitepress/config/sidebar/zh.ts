@@ -62,6 +62,10 @@ export const zh: DefaultTheme.NavItem[] = [
         link: '/component/dialog/index'
       },
       {
+        text: 'Dropdown 下拉菜单',
+        link: '/component/dropdown/index'
+      },
+      {
         text: 'Slider 滑块',
         link: '/component/slider/index'
       },
