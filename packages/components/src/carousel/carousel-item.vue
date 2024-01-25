@@ -1,5 +1,7 @@
 <template>
-  <div :style="style" class="qf-carousel-item">
+  <div :style="style"
+    :class="classList"
+  >
     <slot></slot>
   </div>
 </template>
@@ -11,5 +13,5 @@ defineOptions({
   name: 'qf-carousel-item'
 });
 
-const { style } = useCarouselItem();
+const { style, classList } = useCarouselItem();
 </script>

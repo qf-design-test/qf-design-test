@@ -18,7 +18,5 @@
   height: 100%;
   text-align: center;
   padding-top: 60px;
-  color: #fff;
-  background: url(https://random.imagecdn.app/500/150);
 }
 </style>
