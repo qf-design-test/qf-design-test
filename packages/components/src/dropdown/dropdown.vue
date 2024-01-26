@@ -5,6 +5,7 @@
       @mouseenter="onMouseEnter"
       @mouseleave="onMouseLeave"
       ref="anchor"
+      class="qf-dropdown__anchor"
     >
       <slot />
     </div>
@@ -20,7 +21,7 @@
           <li
             v-for="item in menus"
             :key="item.key"
-            @click="itemClick(item.value)"
+            @click="itemClick(item)"
             :class="[
               'qf-dropdown__item',
               item.disabled ? 'qf-dropdown__item--disabled' : ''
@@ -61,6 +62,4 @@ const {
   style,
   itemClick
 } = useDropdown(props, anchor, menuRef, emit);
-
-console.log('menus', menus);
 </script>
