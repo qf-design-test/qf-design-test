@@ -70,6 +70,10 @@ export const zh: DefaultTheme.NavItem[] = [
         link: '/component/slider/index'
       },
       {
+        text: 'Collapse 折叠面板',
+        link: '/component/collapse/index'
+      },
+      {
         text: 'Message 消息通知',
         link: '/component/message/index'
       }
