@@ -24,7 +24,10 @@ export const useCollapse = (
       }
     }
 
-    const payload = props.accordion ? selfModel.value[0] : selfModel.value;
+    const payload = props.accordion
+      ? selfModel.value[0] ?? ''
+      : selfModel.value;
+
     model.value = payload;
     emit('change', payload);
   };

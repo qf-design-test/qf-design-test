@@ -63,7 +63,7 @@ describe('collapse组件', () => {
 
     const titles = wrapper.findAll('.qf-collapse-item__title');
     await titles[0].trigger('click');
-    expect(wrapper.props('modelValue')).toEqual('1');
+    expect(wrapper.props('modelValue')).toEqual('');
     await titles[1].trigger('click');
     expect(wrapper.props('modelValue')).toEqual('2');
   });
