@@ -50,9 +50,9 @@ const initialVal = ref(null);
 const validate = () => {
   if (!props.prop) return; // 如果没有prop，则返回
 
-  const fieldRule = formContext?.rules?.value[props.prop!]; // 获取字段的验证规则
+  const fieldRule = formContext?.rules?.[props.prop!]; // 获取字段的验证规则
   const fieldValue = {
-    [props.prop]: formContext?.model.value[props.prop!]
+    [props.prop]: formContext?.model?.[props.prop!]
   }; // 获取字段的值
   const validator = new Schema({
     [props.prop!]: fieldRule
