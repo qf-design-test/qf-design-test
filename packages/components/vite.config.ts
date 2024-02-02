@@ -11,7 +11,7 @@ export default defineConfig({
     //minify: false,
     rollupOptions: {
       //忽略不需要打包的文件
-      external: ['vue', /\.less/, '@qf/utils'],
+      external: ['vue', 'async-validator', /\.less/, '@qf/utils'],
       input: ['index.ts'],
       output: [
         {

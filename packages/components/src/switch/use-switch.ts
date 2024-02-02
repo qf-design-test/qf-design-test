@@ -12,8 +12,13 @@ export const useSwitch = (
 
   // 监听selfModel的变化
   watch(selfModel, (val: boolean) => {
+    if (model.value === val) return;
     model.value = val; // 更新model的值
     emit('change'); // 触发change事件
+  });
+
+  watch(model, (val: boolean) => {
+    selfModel.value = val;
   });
 
   // 计算class列表

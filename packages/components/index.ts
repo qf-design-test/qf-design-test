@@ -15,7 +15,8 @@ import {
   Card,
   Carousel,
   Dropdown,
-  Collapse
+  Collapse,
+  Form
 } from './src';
 
 const components = [
@@ -34,7 +35,8 @@ const components = [
   Card,
   Carousel,
   Dropdown,
-  Collapse
+  Collapse,
+  Form
 ];
 
 export {
@@ -53,7 +55,8 @@ export {
   Card,
   Carousel,
   Dropdown,
-  Collapse
+  Collapse,
+  Form
 };
 
 export default {
